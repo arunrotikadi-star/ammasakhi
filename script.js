@@ -30,11 +30,11 @@ function calculateBudget() {
 
     if (savings >= 0) {
         result.textContent =
-            "Your monthly savings: ₹" + savings.toLocaleString("en-IN");
+            "Your monthly savings: ₹" + savings.toLocaleString("te-IN");
     } else {
         result.textContent =
             "You are spending ₹" +
-            Math.abs(savings).toLocaleString("en-IN") +
+            Math.abs(savings).toLocaleString("te-IN") +
             " more than your income.";
     }
 }
