@@ -1,0 +1,59 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmmaSakhi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🌸 AmmaSakhi</h1>
+        <p>A Smart Companion for Every Mother</p>
+    </header>
+
+    <main>
+        <h2>Welcome, Amma!</h2>
+        <p>Learn everyday skills easily, one step at a time.</p>
+
+        <section class="cards">
+            <div class="card">
+                <h3>📱 Smartphone Skills</h3>
+                <p>Learn calls and video calls.</p>
+                <button onclick="speak('Learn how to make calls and video calls.')">
+                    Listen
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>🏦 Banking Safety</h3>
+                <p>Learn how to stay safe from scams.</p>
+                <button onclick="speak('Never share your ATM PIN or OTP with anyone.')">
+                    Listen
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>📚 Basic Education</h3>
+                <p>Learn simple English and numbers.</p>
+                <button onclick="speak('Practice English words and numbers every day.')">
+                    Listen
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>💰 Family Budget</h3>
+                <p>Calculate your monthly savings.</p>
+                <input id="income" type="number" placeholder="Monthly income">
+                <input id="expenses" type="number" placeholder="Monthly expenses">
+                <button onclick="calculateBudget()">Calculate Savings</button>
+                <p id="result"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
