@@ -1,7 +1,7 @@
 
 function speak(message) {
     const speech = new SpeechSynthesisUtterance(message);
-    speech.lang = "en-IN";
+    speech.lang = "te-IN";
     speech.rate = 0.85;
 
     window.speechSynthesis.cancel();
