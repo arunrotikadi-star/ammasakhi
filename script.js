@@ -1,7 +1,32 @@
 
-function speak(message) {
+function speak(message, language = "en-IN") {
+    if (!("speechSynthesis" in window)) {
+        alert("Speech is not supported in this browser.");
+        return;
+    }
+
     const speech = new SpeechSynthesisUtterance(message);
-    speech.lang = "te-IN";
+    const voices = window.speechSynthesis.getVoices();
+
+    let voice;
+
+    if (language === "te-IN") {
+        voice = voices.find(v =>
+            v.lang.toLowerCase().startsWith("te")
+        );
+    }
+
+    if (!voice) {
+        voice = voices.find(v =>
+            v.lang === language
+        );
+    }
+
+    if (voice) {
+        speech.voice = voice;
+    }
+
+    speech.lang = language;
     speech.rate = 0.85;
 
     window.speechSynthesis.cancel();
